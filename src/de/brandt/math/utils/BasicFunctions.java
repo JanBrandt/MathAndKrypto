@@ -1,5 +1,10 @@
+
 package de.brandt.math.utils;
 
-public class BasicFunctions {
+public final class BasicFunctions {
+
+  public int eulerPhiFunction(final int n) {
+    return n;
+  }
 
 }
