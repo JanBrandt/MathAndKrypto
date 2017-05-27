@@ -2,10 +2,9 @@
 package de.brandt.math.algebra;
 
 /**
- * @author Gorgun
+ * @author Jan Brandt
  *
  */
 public class GaloisFields {
 
 }
-
