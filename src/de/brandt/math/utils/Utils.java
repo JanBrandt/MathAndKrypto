@@ -4,7 +4,7 @@ package de.brandt.math.utils;
 /**
  * @author Jan Brandt
  */
-public final class BasicFunctions {
+public class Utils {
 
   /**
    * Computes the number of integers that are prime to the given number n.
@@ -14,7 +14,7 @@ public final class BasicFunctions {
    */
   public int eulerPhiFunction(final int n) {
     int number = 0;
-    for (int i = 0; i < n; i++) {
+    for (int i = 1; i < n; i++) {
       if (gcd(n, i) == 1) {
         number++;
       }
