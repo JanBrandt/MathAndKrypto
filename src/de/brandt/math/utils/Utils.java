@@ -19,6 +19,9 @@ public final class Utils {
    * @return The number of integers that are prime to n
    */
   public static int eulerPhiFunction(final int n) {
+    if (isPrime(n)) {
+      return n - 1;
+    }
     int number = 1;
     for (int i = 2; i < n; i++) {
       if (gcd(n, i) == 1) {
@@ -30,7 +33,8 @@ public final class Utils {
 
   /**
    * Computes the greatest common divider of a and b by using
-   * the euclidian algorithm.
+   * the euclidian algorithm. Does some pre-checks and uses then the function
+   * gcdWithPrec.
    *
    * @param a First number
    * @param b Second number
@@ -51,12 +55,30 @@ public final class Utils {
     }
   }
 
+  /**
+   * Computes the greatest common divider with the euclidian algorithm.
+   * Preconditions required: a > b > 0.
+   * @param a First number, a > b
+   * @param b Second number, b < a
+   * @return The gcd
+   */
   private static int gcdWithPrec(final int a, final int b) {
-    if (a == 0 || b == 0) {
-      return a + b;
+    if (b == 0) {
+      return a;
     } else {
       return gcdWithPrec(b, a % b);
     }
+  }
+
+  /**
+   * This functions checks if the given parameter p is a prime number.
+   * //TODO describe method.
+   * @param p The given number
+   * @return True if p is prime, false if p is not prime
+   */
+  public static boolean isPrime(final int p) {
+    // TODO Auto-generated method stub
+    return false;
   }
 
 }
