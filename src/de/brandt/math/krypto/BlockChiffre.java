@@ -8,7 +8,13 @@ package de.brandt.math.krypto;
  *
  */
 public abstract class BlockChiffre {
+  /**
+   * The length of each block of the chiffre.
+   */
   private int blockLength;
+  /**
+   * The function to encrypt any message.
+   */
   private EncryptionFunction encryptor;
 
   /**
@@ -23,5 +29,13 @@ public abstract class BlockChiffre {
    */
   public final int getBlockLength() {
     return blockLength;
+  }
+
+  /**
+   * @param enFun The encryption function for the BlockChiffre.
+   * @return
+   */
+  public void setEncryptionFunction(final EncryptionFunction enFun) {
+    this.encryptor = enFun;
   }
 }
