@@ -10,7 +10,7 @@ import org.junit.runners.Suite.SuiteClasses;
  *
  */
 @RunWith(Suite.class)
-@SuiteClasses({ TestEulerPhiFunction.class, Testgcd.class })
+@SuiteClasses({ TestEulerPhiFunction.class, Testgcd.class, TestIsPrime.class})
 public class AllUtilsTests {
 
 }
