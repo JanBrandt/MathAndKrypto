@@ -33,9 +33,13 @@ public abstract class BlockChiffre {
 
   /**
    * @param enFun The encryption function for the BlockChiffre.
-   * @return
    */
-  public void setEncryptionFunction(final EncryptionFunction enFun) {
-    this.encryptor = enFun;
-  }
+  public abstract void setEncryptionFunction(EncryptionFunction enFun);
+
+  /**
+   * @param message The message that should be encrypted
+   * @param key The key to encrypt the message
+   * @return The encrypted String
+   */
+  public abstract String encrypt(String message, String key);
 }
