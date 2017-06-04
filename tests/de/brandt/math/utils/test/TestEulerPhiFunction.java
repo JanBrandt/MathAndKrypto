@@ -33,13 +33,13 @@ public class TestEulerPhiFunction {
     assertEquals("Phi(6) = 2.", 2, Utils.eulerPhiFunction(6));
   }
 
-//  /**
-//   * Test for valid solutions with big numbers.
-//   */
-//  @Test
-//  public void testEulerPhiFunctionWithBigInts() {
-//    assertEquals("Phi(104395301) = 104395300.",
-//        104395300, Utils.eulerPhiFunction(104395301));
-//  }
+  /**
+   * Test for valid solutions with big numbers.
+   */
+  @Test
+  public void testEulerPhiFunctionWithBigInts() {
+    assertEquals("Phi(104395301) = 104395300.",
+        104395300, Utils.eulerPhiFunction(104395301));
+  }
 
 }
