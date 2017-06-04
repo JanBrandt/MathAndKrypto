@@ -71,14 +71,41 @@ public final class Utils {
   }
 
   /**
-   * This functions checks if the given parameter p is a prime number.
-   * //TODO describe method.
-   * @param p The given number
-   * @return True if p is prime, false if p is not prime
+   * This functions checks if the given parameter n is a prime number.
+   * Used the sieve of Eratosthenes here.
+   * @param n The given number
+   * @return True if p is prime, false if n is not prime
    */
-  public static boolean isPrime(final int p) {
-    // TODO Auto-generated method stub
-    return false;
+  public static boolean isPrime(final int n) {
+    // 0 and 1 are no primes
+    if (n == 0 || n == 1) {
+      return false;
+    }
+    if (n == 2) {
+      return true;
+    }
+    // computes the neccessary size of the sieve
+    int size = (int) Math.ceil(Math.sqrt(n));
+    // generates an array of the needed size (+1 to avoid index-shifts)
+    boolean[] sieve = new boolean[size + 1];
+    // initialize the array beginning with position 2
+    for (int i = 2; i < sieve.length; i++) {
+      sieve[i] = true;
+    }
+    // test if current number divides n, if true, return false,
+    // else eliminate all multiples of current number
+    for (int i = 2; i < sieve.length; i++) {
+      if (sieve[i]) {
+        if (n % i == 0) {
+          return false;
+        } else {
+          for (int j = i; j < sieve.length; j += i) {
+            sieve[j] = false;
+          }
+        }
+      }
+    }
+    return true;
   }
 
 }
