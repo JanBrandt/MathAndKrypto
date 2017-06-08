@@ -18,6 +18,7 @@ public abstract class BlockChiffre {
   private EncryptionFunction encryptor;
 
   /**
+   * TODO Description.
    * @param length The length of each block of the chiffre.
    */
   public BlockChiffre(final int length) {
@@ -30,11 +31,6 @@ public abstract class BlockChiffre {
   public final int getBlockLength() {
     return blockLength;
   }
-
-  /**
-   * @param enFun The encryption function for the BlockChiffre.
-   */
-  public abstract void setEncryptionFunction(EncryptionFunction enFun);
 
   /**
    * @param message The message that should be encrypted
