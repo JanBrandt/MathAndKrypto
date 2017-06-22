@@ -9,7 +9,7 @@ package de.brandt.math.krypto;
 public final class HillChiffre extends BlockChiffre {
 
   public HillChiffre(final int length) {
-    super(length);
+    super(length, null);
     // TODO Auto-generated constructor stub
   }
 

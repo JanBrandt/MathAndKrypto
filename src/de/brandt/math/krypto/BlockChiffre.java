@@ -20,9 +20,11 @@ public abstract class BlockChiffre {
   /**
    * TODO Description.
    * @param length The length of each block of the chiffre.
+   * @param encFun the encription function for the chiffre
    */
-  public BlockChiffre(final int length) {
+  public BlockChiffre(final int length, final EncryptionFunction encFun) {
     this.blockLength = length;
+    this.encryptor = encFun;
   }
 
   /**
@@ -30,6 +32,10 @@ public abstract class BlockChiffre {
    */
   public final int getBlockLength() {
     return blockLength;
+  }
+
+  public final void setEnctryptionFunction(EncryptionFunction encFun) {
+    this.encryptor = encFun;
   }
 
   /**

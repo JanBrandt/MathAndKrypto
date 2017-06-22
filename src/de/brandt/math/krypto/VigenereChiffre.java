@@ -10,7 +10,7 @@ package de.brandt.math.krypto;
 public final class VigenereChiffre extends BlockChiffre {
 
   public VigenereChiffre(final int length) {
-    super(length);
+    super(length, null);
     // TODO Auto-generated constructor stub
   }
 
