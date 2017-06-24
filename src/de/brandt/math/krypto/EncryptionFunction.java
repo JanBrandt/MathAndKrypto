@@ -12,4 +12,6 @@ public abstract class EncryptionFunction {
    * @return The encrypted message
    */
   public abstract String encrypt(String message, String key);
+
+  public abstract boolean validKey(String key);
 }
