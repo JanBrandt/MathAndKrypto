@@ -7,9 +7,13 @@ package de.brandt.math.krypto;
  */
 public final class PermutationsChiffre extends BlockChiffre {
 
-  public PermutationsChiffre(final int length) {
-    super(length);
-    // TODO Auto-generated constructor stub
+  /**
+   * @param length the block-length of the chiffre.
+   * @param encFun the encryption-function.
+   */
+  public PermutationsChiffre(final int length,
+                             final EncryptionFunction encFun) {
+    super(length, encFun);
   }
 
   @Override
